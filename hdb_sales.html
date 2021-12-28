@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>HDB Price Prediction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<script src="hdb_sales.js"></script>
+	<link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+	<div class="img"></div>
+	<img src="SG.jpeg" class="img">
+	<h1 class="title">HDB Price Prediction</h1>
+	<form class="form">
+  <div>
+	 <h2 class="sqft">Select Town</h2>
+     <select class="town" name="" id="uitown">
+    <option value="" disabled="disabled" selected="selected">Select Town</option>
+		<option>ANG MO KIO</option>
+        <option>BEDOK</option>
+		<option>CENTRAL AREA</option>
+		<option>CHOA CHU KANG</option>
+		<option>HOUGANG</option>
+		<option>PASIR RIS </option>
+		<option>PUNGGOL</option>
+		<option>SERANGOON</option>
+		<option>SENGKANG</option>
+		<option>TAMPINES</option>		
+		<option>WOODLANDS</option>		
+	</select>
+	</div>
+    <div>
+	<h2 class="StreetName">Select Street Name</h2>
+	<select class="streetname" name="" id="street_name">
+    <option value="" disabled="disabled" selected="selected">Select Street Name</option>
+		<option>ANG MO KIO AVE 4</option>
+        <option>ANG MO KIO AVE 6</option>
+		<option>BEDOK CTRL</option>
+		<option>BEDOK NTH AVE 1</option>
+		<option>BAIN ST</option>
+		<option>CANTONMENT RD</option>
+		<option>TECK WHYE LANE</option>
+		<option>WOODLANDS CRES</option>
+		<option>SENGKANG CTRL</option>
+		<option>PUNGGOL DR</option>		
+		<option>PUNGGOL CTRL</option>		
+	</select>
+	</div>
+    <h2 class="flatmodel">Select Flat Model</h2>
+	<div class="switch-field">
+	<select class="flatmodel" name="" id="flat_model">
+		<option value="" disabled="disabled" selected="selected">Select Flat Model</option>
+		<option>Apartment</option>
+		<option>Adjoined flat</option>
+		<option>DBSS</option>
+		<option>Improved</option>
+		<option>Maisonette</option>
+		<option>Model A </option>
+		<option>New Generation</option>
+		<option>Premium Apartment</option>
+		<option>Type S1</option>
+		<option>Type S2</option>		
+		
+	</select>	
+	</div>
+	<h2 >Area in Sq.m</h2>
+	<div>
+	    <input class="area"  type="number" id="floor_area" class="floatLabel" name="Squareft" value="100">
+	</div>
+	<h2 class="flattype">Select Flat Type</h2>
+	<div class="switch-field">
+	<select class="flattype" name="" id="flat_type">
+		<option value="" disabled="disabled" selected="selected">Select FlatType</option>
+		<option>1 ROOM</option>
+		<option>2 ROOM</option>
+		<option>3 ROOM</option>
+		<option>4 ROOM</option>
+		<option>5 ROOM</option>
+		<option>Executive</option>
+		<option>Multi Generation</option>
+	</select>	
+	</div>
+	<div>
+	<h2 class="Storey">Select Storey Range</h2>
+	<select class="storey" name="" id="storey_range">
+    <option value="" disabled="disabled" selected="selected">Select Storey Range</option>
+		<option>01 TO 03</option>
+        <option>04 TO 06</option>
+		<option>07 TO 09</option>
+		<option>10 TO 12</option>
+		<option>13 TO 15</option>
+		<option>16 TO 18</option>
+		<option>19 TO 21</option>
+		<option>22 TO 24</option>
+		<option>31 TO 33</option>
+		<option>46 TO 48</option>
+		<option>49 TO 51</option>		
+	</select>
+	</div>
+	<div>
+	<h2 class="lease">Enter Remaining Lease</h2>
+    <input class="area"  type="number" id="remaining_lease" class="floatLabel" name="lease" value="50">
+	</div>
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button" >ESTIMATE</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+    </form>
+ </body>
+</html>
